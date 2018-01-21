@@ -1,0 +1,48 @@
+{
+  "name": "strapper",
+  "version": "1.0.0",
+  "description": "Quickstart API structure",
+  "main": "src/loader.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "clear": "rimraf bin",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir bin src",
+    "build:watch": "npm run build -- --watch",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha tests/**/*.spec.js --require babel-register --reporter nyan",
+    "test:tdd": "npm run test -- --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Area-16/strapper.git"
+  },
+  "keywords": [
+    "quickstart",
+    "api",
+    "node"
+  ],
+  "author": "Douglas E. Alves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Area-16/strapper/issues"
+  },
+  "homepage": "https://github.com/Area-16/strapper#readme",
+  "dependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "eslint": "4.16.0",
+    "husky": "0.14.3",
+    "mocha": "5.0.0",
+    "nock": "9.1.6",
+    "nyc": "11.4.1",
+    "rimraf": "2.6.2",
+    "sinon": "4.2.0",
+    "sinon-chai": "2.14.0"
+  }
+}
