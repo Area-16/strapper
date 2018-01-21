@@ -14,7 +14,8 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "mocha tests/**/*.spec.js --require babel-register --reporter nyan",
     "test:tdd": "npm run test -- --watch",
-    "test:coverage": "nyc npm test"
+    "test:coverage": "nyc npm test",
+    "precommit": "npm run lint:fix"
   },
   "repository": {
     "type": "git",
